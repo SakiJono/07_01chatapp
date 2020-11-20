@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>chatApp</title>
+  <link href="https://fonts.googleapis.com/earlyaccess/nikukyu.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/sanitize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body id="top">
+  <div id="top1">
+
+    <h1>にゃんちゃっと</h1>
+    <label for="login">
+      ニャマエ
+      <input type="text" id="login">
+    </label>
+
+    <div id=img>
+      <img src="img/shironeko.png" alt="" class="img">
+      <img src="img/chaneko.png" alt="" class="img">
+      <img src="img/kuroneko.png" alt="" class="img">
+    </div>
+
+    <button id="newname">アタラシイニャマエ</button>
+  </div>
+  <div id="top2">
+
+    <h1>にゃんちゃっと</h1>
+    <label for="newlogin">
+      アタラシイニャマエ
+      <input type="text" id="newlogin">
+    </label>
+
+
+
+    <ul id="vibox">
+
+      <img src="img/shironeko.png" alt="" class="img2" id="img1">
+      <img src="img/chaneko.png" alt="" class="img2" id="img2">
+      <img src="img/kuroneko.png" alt="" class="img2" id="img3">
+
+    </ul>
+
+
+    <ul id="sobox">
+      <button id="so1b">ニャー</button>
+      <audio id="so1" preload="auto">
+        <source src="sound/cat20.mp3" type="audio/mp3">
+      </audio>
+      <button id="so2b">ニーニー</button>
+      <audio id="so2" preload="auto">
+        <source src="sound/babycat.mp3" type="audio/mp3">
+      </audio>
+      <button id="so3b">ナーン</button>
+      <audio id="so3" preload="auto">
+        <source src="sound/cat14.mp3" type="audio/mp3">
+      </audio>
+    </ul>
+    <button id="wname">モドル</button>
+    <button id="newmen">ケッテイ</button>
+
+  </div>
+  <div id="top3">
+
+    <h1>にゃんちゃっと</h1>
+    <h2>ニャマエチガウゾ</h2>
+
+
+
+    <div id=img>
+      <img src="img/shironeko.png" alt="" class="img">
+      <img src="img/chaneko.png" alt="" class="img">
+      <img src="img/kuroneko.png" alt="" class="img">
+    </div>
+
+    <button id="wname2">モドル</button>
+    <button id="newname2">アタラシイニャマエ</button>
+  </div>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- 以下にfirebaseのコードを貼り付けよう -->
+
+  <script>
+    const so1 = document.querySelector("#so1"); // <audio>
+    const so1b = document.querySelector("#so1b"); // <button>
+    const so2 = document.querySelector("#so2"); // <audio>
+    const so2b = document.querySelector("#so2b"); // <button>
+    const so3 = document.querySelector("#so3"); // <audio>
+    const so3b = document.querySelector("#so3b"); // <button>
+
+    so1b.addEventListener("click", () => {
+      // 再生する
+      so1.play();
+    });
+
+    so2b.addEventListener("click", () => {
+      // 再生する
+      so2.play();
+    });
+
+    so3b.addEventListener("click", () => {
+      // 再生する
+      so3.play();
+    });
+
+    const so1bc = document.getElementById('so1b');
+    const so2bc = document.getElementById('so2b');
+    const so3bc = document.getElementById('so3b');
+    let sound = 0;
+
+    so1bc.onclick = function () {
+      so1bc.style.borderColor = '#a52a2a';
+      so2bc.style.borderColor = '#e78f8f';
+      so3bc.style.borderColor = '#e78f8f';
+      sound = 1;
+      console.log(sound);
+    };
+
+    so2bc.onclick = function () {
+      so2bc.style.borderColor = '#a52a2a';
+      so1bc.style.borderColor = '#e78f8f';
+      so3bc.style.borderColor = '#e78f8f';
+      sound = 2;
+      console.log(sound);
+    }
+
+    so3bc.onclick = function () {
+      so3bc.style.borderColor = '#a52a2a';
+      so1bc.style.borderColor = '#e78f8f';
+      so2bc.style.borderColor = '#e78f8f';
+      sound = 3;
+      console.log(sound);
+    }
+
+    let visu = 0;
+
+
+    const img1 = document.getElementById('img1');
+    const img2 = document.getElementById('img2');
+    const img3 = document.getElementById('img3');
+
+
+    img1.onclick = function () {
+      img1.style.borderColor = '#a52a2a';
+      img2.style.borderColor = '#e78f8f';
+      img3.style.borderColor = '#e78f8f';
+      visu = 1;
+      console.log(visu);
+    };
+    img2.onclick = function () {
+      img2.style.borderColor = '#a52a2a';
+      img1.style.borderColor = '#e78f8f';
+      img3.style.borderColor = '#e78f8f';
+
+      visu = 2;
+      console.log(visu);
+    };
+    img3.onclick = function () {
+      img3.style.borderColor = '#a52a2a';
+      img1.style.borderColor = '#e78f8f';
+      img2.style.borderColor = '#e78f8f';
+      visu = 3;
+      console.log(visu);
+    };
+
+    const Name = document.getElementById('newname');
+    const Name2 = document.getElementById('newname2');
+    const Name3 = document.getElementById('wname');
+    const Name4 = document.getElementById('wname2');
+
+    const Top1 = document.getElementById('top1');
+    const Top2 = document.getElementById('top2');
+    const Top3 = document.getElementById('top3');
+
+
+    Name.onclick = function () {
+      Top2.style.zIndex = 10;
+    }
+
+    Name2.onclick = function () {
+      Top2.style.zIndex = 10;
+    }
+
+    Name3.onclick = function () {
+      Top1.style.zIndex = 10;
+      Top2.style.zIndex = 2;
+      Top3.style.zIndex = 1;
+    }
+
+    Name4.onclick = function () {
+      Top1.style.zIndex = 10;
+      Top2.style.zIndex = 2;
+      Top3.style.zIndex = 1;
+    }
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase.js">
+  //-appを消す</script>
+
+  <script>
+
+    var firebaseConfig = {
+      apiKey: "AIzaSyD0jd3eGPofRzi-vjktooltkDsem47wJUg",//APIキー人に見せない
+      authDomain: "chat-sample-346a1.firebaseapp.com",
+      databaseURL: "https://chat-sample-346a1.firebaseio.com",
+      projectId: "chat-sample-346a1",
+      storageBucket: "chat-sample-346a1.appspot.com",
+      messagingSenderId: "278524480162",
+      appId: "1:278524480162:web:dd7d888c8a045f1b10e5fb"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script>
+
+    // データベースの設定を記述
+    const userid = firebase.firestore().collection('id');
+
+
+    $('#newmen').on('click', function (e) {
+      // console.log(e.keyCode);
+      if (visu != 0, sound != 0) {
+        const newid = {
+          userid: $('#newlogin').val(),
+          visu: visu,
+          sound: sound,
+          time: firebase.firestore.FieldValue.serverTimestamp(),
+        };
+        userid.add(newid);//firebaseのadd関数
+        $('#newlogin').val('')
+      } else {
+        alert('未選択です');
+      }
+
+
+    });
+
+
+
+    // データをリアルタイムに取得する処理
+    userid.orderBy('time', 'desc').onSnapshot(function (querySnapshot) {//desc昇順、
+      // まずはconsole.log()で出力してデータの形を確認！
+      // console.log(db);
+      const dataArray = [];
+
+      // console.log(querySnapshot.docs);
+      querySnapshot.docs.forEach(function (doc) {
+        const data = {
+          id: doc.id,
+          data: doc.data()
+        }
+        dataArray.push(data);
+      });
+      // console.log(dataArray);
+
+      const tagArray = [];
+      const visuArray = [];
+      const soundArray = [];
+
+      dataArray.forEach(function (data) {
+        tagArray.push(`${data.data.userid}`)
+        console.log(tagArray);
+      })
+      dataArray.forEach(function (data) {
+        visuArray.push(`${data.data.visu}`)
+        console.log(visuArray);
+      })
+      dataArray.forEach(function (data) {
+        soundArray.push(`${data.data.sound}`)
+        console.log(soundArray);
+      })
+
+
+
+    });
+    const loginName = $('#login').val();
+    let know = false;
+    const n = { count: 0 };
+    tagArray.forEach(function (loginName) {
+      if (tagArray == loginName) {
+        know = true;
+        ++n.count
+      } else {
+        ++n.count
+      }
+    })
+
+    if (know == false) {
+      Top3.style.zIndex = 10;
+    } else {
+
+      document.location.href = "index.html";
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>

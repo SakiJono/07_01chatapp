@@ -1,0 +1,253 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/asiato.jpg);
+  background-repeat: repeat;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  
+}
+#top{
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/asiato.jpg);
+  background-repeat: repeat;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  
+}
+
+#top1{
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 50%;
+  height: 400px;
+  
+  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: rgb(247, 248, 197);
+ font-family: "Nikukyu";
+ border-radius: 5%;
+ z-index: 3;
+}
+
+#top2{
+  position: absolute;
+   top: 20%;
+  left: 25%;
+  width: 50%;
+  height: 400px;
+  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: rgb(247, 248, 197);
+ font-family: "Nikukyu";
+ border-radius: 5%;
+ z-index: 2;
+}
+
+#vibox{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.img2{
+  width: 25%;
+  border: solid;
+  border-color: #e78f8f;
+  border-width: 5px;
+  border-radius: 50%;
+}
+
+
+#sobox{
+  display: flex;
+  justify-content: space-around;
+}
+
+#so1b,#so2b,#so3b{
+  font-family: "Nikukyu";
+   border: solid;
+  border-color: #e78f8f;
+  border-width: 3px;
+  border-radius: 5%;
+}
+
+
+#top3{
+  position: absolute;
+   top: 20%;
+  left: 25%;
+  width: 50%;
+  height: 400px;
+  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: rgb(247, 248, 197);
+ font-family: "Nikukyu";
+ border-radius: 5%;
+ z-index: 1;
+}
+
+
+
+
+#newname,#newname2,#wname,#wname2{
+ font-family: "Nikukyu"; 
+}
+
+#newmen{
+  font-family: "Nikukyu"; 
+  color: #a52a2a;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+
+#login,#newlogin{
+background-color: whitesmoke;
+border-style: solid;
+border-width: 2px;
+}
+
+#img{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.img{
+  width: 30%;
+}
+
+h1{
+font-family: "Nikukyu"; 
+font-size: 48px;
+color: rgb(179, 6, 78);
+text-align: center;
+margin: 0%;
+}
+
+
+main{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: 0%;
+  background-color: rgb(247, 248, 197);
+}
+
+#input_box{
+  position: relative;
+  margin-top: 250px;
+  
+  width: 500px;
+  height: 500px;
+}
+
+#input{
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: auto;
+  top: 40%;
+  left: 28%;
+}
+
+#neko{
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+#output_box{
+height: 85%;
+}
+
+
+    @media only screen and (max-device-width: 480px) {
+    body{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    background-image: url(../img/asiato.jpg);
+    background-repeat: repeat;
+    position: relative;
+    height: 650px;
+    
+    }
+
+    #top1,#top2,#top3{
+    width: 100%;
+    height: 40%;
+    top: 20%;
+    left: 0%;
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background-color: rgb(247, 248, 197);
+    font-family: "Nikukyu";
+    border-radius: 5%;
+    }
+
+
+
+    h1{font-family: "Nikukyu"; 
+    font-size: 30px;
+    text-align: center;
+    }
+
+    main{
+    width: 90%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    background-color: rgb(247, 248, 197);
+    }
+
+    
+
+    #input_box{
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    margin-top: 0%;
+    top: 400px;
+    }
+
+    #input{
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    height: auto;
+    top: 50%;
+    left: 30%;
+    display: inline;
+    }
+
+    #neko{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    }
+
+
+  }
